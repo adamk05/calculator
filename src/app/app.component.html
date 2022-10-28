@@ -4,30 +4,30 @@
   </div>
   <div class="calculator">
     <div class="field">
-      <input type="text" class="field-input" pInputText />
+      <input type="text" class="field-input" [ngModel]="operation" pInputText />
     </div>
-      <p-button label="C" class="btn-c"></p-button>
-      <p-button label="<-" class="btn-backspace"></p-button>
-      <p-button label="/" class="btn-dividing"></p-button>
+      <p-button label="C" class="btn-c" (onClick)="clearOperation()"></p-button>
+      <p-button icon="pi pi-arrow-left" class="btn-backspace" (onClick)="cutLastSign()"></p-button>
+      <p-button label="/" class="btn-dividing" (onClick)="addToOperation('/')"></p-button>
 
-      <p-button label="7" class="btn-7"></p-button>
-      <p-button label="8" class="btn-8"></p-button>
-      <p-button label="9" class="btn-9"></p-button>
-      <p-button label="X" class="btn-multiplication"></p-button>
+      <p-button label="7" class="btn-7" (onClick)="addToOperation('7')"></p-button>
+      <p-button label="8" class="btn-8" (onClick)="addToOperation('8')"></p-button>
+      <p-button label="9" class="btn-9" (onClick)="addToOperation('9')"></p-button>
+      <p-button icon="pi pi-times" class="btn-multiplication" (onClick)="addToOperation('*')"></p-button>
 
-      <p-button label="4" class="btn-4"></p-button>
-      <p-button label="5" class="btn-5"></p-button>
-      <p-button label="6" class="btn-6"></p-button>
-      <p-button label="-" class="btn-minus"></p-button>
+      <p-button label="4" class="btn-4" (onClick)="addToOperation('4')"></p-button>
+      <p-button label="5" class="btn-5" (onClick)="addToOperation('5')"></p-button>
+      <p-button label="6" class="btn-6" (onClick)="addToOperation('6')"></p-button>
+      <p-button label="-" class="btn-minus" (onClick)="addToOperation('-')"></p-button>
 
-      <p-button label="1" class="btn-1"></p-button>
-      <p-button label="2" class="btn-2"></p-button>
-      <p-button label="3" class="btn-3"></p-button>
-      <p-button label="+" class="btn-plus"></p-button>
+      <p-button label="1" class="btn-1" (onClick)="addToOperation('1')"></p-button>
+      <p-button label="2" class="btn-2" (onClick)="addToOperation('2')"></p-button>
+      <p-button label="3" class="btn-3" (onClick)="addToOperation('3')"></p-button>
+      <p-button label="+" class="btn-plus" (onClick)="addToOperation('+')"></p-button>
 
-      <p-button label="." class="btn-dot"></p-button>
-      <p-button label="0" class="btn-0"></p-button>
-      <p-button label="=" class="btn-equals"></p-button>
+      <p-button label="." class="btn-dot" (onClick)="addToOperation('.')"></p-button>
+      <p-button label="0" class="btn-0" (onClick)="addToOperation('0')"></p-button>
+      <p-button label="=" class="btn-equals" (onClick)="countResult()"></p-button>
 
   </div>
 </div>

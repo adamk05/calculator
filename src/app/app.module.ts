@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     InputNumberModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

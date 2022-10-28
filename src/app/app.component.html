@@ -4,7 +4,7 @@
   </div>
   <div class="calculator">
     <div class="field">
-      <input type="text" class="field-input" [ngModel]="operation" pInputText />
+      <input disabled="true" type="text" class="field-input" [ngModel]="operation" pInputText />
     </div>
       <p-button label="C" class="btn-c" (onClick)="clearOperation()"></p-button>
       <p-button icon="pi pi-arrow-left" class="btn-backspace" (onClick)="cutLastSign()"></p-button>
